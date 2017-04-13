@@ -1,0 +1,15 @@
+html
+    head
+    body
+        form.Form(action="/login",method="post")
+            .FormField(for='username')
+                label.FormLabel(for='username') Username
+                input.FormInput.j-login-username(type='username', name='email', value='dev')
+            .FormField(for='password')
+                label.FormLabel(for='password') Password
+                input.FormInput.j-login-password(type='password', name='password', value='wanmei3094652')
+            button.Button.Button--primary.j-login-btn() Sign In
+    script(type='text/javascript', src='/assets/js/pages/system.js')
+    script(type='text/javascript').
+        //加载页面逻辑
+        //AjaxModule.system()

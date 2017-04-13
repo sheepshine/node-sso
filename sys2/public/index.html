@@ -1,0 +1,33 @@
+<html>
+<head>
+	
+</head>
+<body>
+	1111
+	<button id="send">发送</button>
+</body>
+<script type="text/javascript" src="http://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="http://cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src='http://sso.com:8087/sso.js'></script>
+<script>
+	console.log(kosid)
+    $.cookie("connect.sid",kosid);
+    if(kosid){
+        document.write('key:',kosid);
+    }else{
+        document.write('未登录');
+    }
+
+    $("#send").click(function(){
+    	$.ajax({
+    	url: "http://testsso.com:8088/ajaxtest",
+    	success: function(){
+
+    	}
+    })
+    })
+
+    
+    console.log("this",document.cookie);
+</script>
+</html>
